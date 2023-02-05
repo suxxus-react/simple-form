@@ -1,16 +1,16 @@
 version: "0"
-name: project
+name: simple-form
 services:
   develop:
     image: vite-react-ts-project
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: vite-react
+    container_name: simple-form
     volumes:
       - .:/app
       - ./src:/app
       - ./public:/app
       - ./node_modules:/app
     ports:
-      - 9000:5173
+      - 5240:5173
