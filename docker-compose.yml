@@ -1,0 +1,16 @@
+version: "0"
+name: project
+services:
+  develop:
+    image: vite-react-ts-project
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vite-react
+    volumes:
+      - .:/app
+      - ./src:/app
+      - ./public:/app
+      - ./node_modules:/app
+    ports:
+      - 9000:5173
